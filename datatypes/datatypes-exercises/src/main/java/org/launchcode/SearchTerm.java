@@ -16,5 +16,6 @@ public class SearchTerm {
         String removeWord = sentence.toLowerCase().replace(search.toLowerCase(), "");
         System.out.println(removeWord);
         scanner.close();
+
     }
 }
