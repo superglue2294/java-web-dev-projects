@@ -10,8 +10,8 @@ public class SearchTerm {
         String search = scanner.nextLine();
         boolean isFound = sentence.toLowerCase().contains(search.toLowerCase());
         System.out.println("The word " + search + " was found in the sentence: " + isFound);
-        Integer index = sentence.indexOf(search);
-        Integer length = search.length();
+        int index = sentence.indexOf(search);
+        int length = search.length();
         System.out.println("Your search term first appears at index " + index + ". Your term is " + length + " characters long.");
         String removeWord = sentence.toLowerCase().replace(search.toLowerCase(), "");
         System.out.println(removeWord);
