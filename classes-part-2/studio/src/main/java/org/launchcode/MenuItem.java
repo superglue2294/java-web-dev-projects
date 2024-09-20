@@ -1,5 +1,9 @@
 package org.launchcode;
 
+import java.text.ParseException;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
 public class MenuItem {
     private double price;
     private String description;
@@ -27,6 +31,20 @@ public class MenuItem {
 
     public void setNew(boolean aNew) {
         isNew = aNew;
+    }
+
+    public boolean compareDate() throws ParseException {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date1 = simpleDateFormat.parse("2022-12-06");
+        Date date2 = simpleDateFormat.parse("2022-12-06");
+        int days = date2.compareTo(date1);
+
+        return days > 30;
+    }
+
+    @Override
+    public String toString() {
+        return this.description + " is $" + this.price;
     }
 }
 
