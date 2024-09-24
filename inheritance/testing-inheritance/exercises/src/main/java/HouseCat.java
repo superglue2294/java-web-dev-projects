@@ -16,6 +16,10 @@ public class HouseCat extends Cat {
         return "Hello, my name is " + name + "!";
     }
 
+    public String catNoise() {
+        return super.noise();
+    }
+
     public String purr() {
         return "I'm a HouseCat";
     }
